@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YD8-Ir-KXv">
+                                <rect key="frame" x="16" y="58" width="96" height="30"/>
+                                <state key="normal" title="Start Success"/>
+                                <connections>
+                                    <action selector="startSuccessButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i27-Gn-9Gy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjP-pG-IBr">
+                                <rect key="frame" x="287" y="58" width="72" height="30"/>
+                                <state key="normal" title="Start Error"/>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ktg-Vw-XQU" customClass="LoadingAnimationView1">
+                                <rect key="frame" x="73" y="236" width="257" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XtS-qd-Y6m" customClass="GraphView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="vjP-pG-IBr" secondAttribute="trailing" id="4ZM-1c-STG"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="YD8-Ir-KXv" secondAttribute="leading" id="NNp-wN-fzV"/>
+                            <constraint firstItem="vjP-pG-IBr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="UXO-hm-vSM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XtS-qd-Y6m" secondAttribute="bottom" id="aiW-sj-uPn"/>
+                            <constraint firstItem="XtS-qd-Y6m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="g5H-Ym-sZx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XtS-qd-Y6m" secondAttribute="trailing" constant="-16" id="io2-Lt-QyN"/>
+                            <constraint firstItem="YD8-Ir-KXv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="lrp-LV-gnp"/>
+                            <constraint firstItem="XtS-qd-Y6m" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="sog-5t-Lnp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="Ktg-Vw-XQU" id="Irh-Jo-zqP"/>
+                        <outlet property="startButton" destination="YD8-Ir-KXv" id="WBU-Yk-cOX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58.399999999999999" y="41.829085457271368"/>
+        </scene>
+    </scenes>
+</document>
